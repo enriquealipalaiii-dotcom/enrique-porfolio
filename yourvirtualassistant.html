@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrique Alipala III - Virtual Assistant & Operations Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutral Professional -->
+    <!-- Application Structure Plan: The SPA is structured as an interactive portfolio, moving beyond a static resume. It uses a thematic, non-linear layout with a hero section for the value proposition, a 'Services' grid to categorize skills, and an interactive, clickable vertical timeline for work experience. This design allows potential clients to quickly understand the services offered and then explore the detailed proof in an engaging, non-overwhelming way, improving scannability and user engagement. -->
+    <!-- Visualization & Content Choices: The primary 'visualization' is an interactive vertical timeline for the work experience. Report Info: Chronological job history. Goal: Display career progression interactively. Viz/Method: HTML/CSS/JS vertical timeline. Interaction: Click to expand/collapse job details. Justification: This is superior to a static list for UX, as it allows progressive disclosure of information. It's a visual metaphor for a career path without using inappropriate data charts. Library/Method: Vanilla JS and Tailwind CSS. CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F7F4;
+            color: #2c3e50;
+        }
+        .timeline-item-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+            padding: 0 1.5rem;
+        }
+        .timeline-item.open .timeline-item-content {
+            max-height: 500px;
+            padding: 1.5rem 1.5rem;
+        }
+        .timeline-item.open .arrow-icon {
+            transform: rotate(90deg);
+        }
+        .arrow-icon {
+            transition: transform 0.3s ease-in-out;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+
+        <header id="home" class="text-center mb-16 md:mb-24">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-2">Enrique Alipala III</h1>
+            <p class="text-xl md:text-2xl text-teal-600 font-medium mb-6">Virtual Assistant & Operations Specialist</p>
+            <div class="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
+                <p>
+                    With nine years of experience in the BPO industry, I help busy professionals and small business owners streamline their operations. I specialize in a wide range of administrative and customer support services, including multichannel communication, logistics coordination, and quality assurance. My proactive, detail-oriented approach allows you to focus on growing your business while I manage the daily to-dos.
+                </p>
+            </div>
+            <div class="mt-8 flex justify-center gap-4">
+                <a href="mailto:enrique.alipalaiii@gmail.com" class="bg-teal-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-teal-700 transition duration-300">Contact Me</a>
+                <a href="#experience" class="bg-white text-teal-600 font-bold py-3 px-6 rounded-lg border border-teal-600 hover:bg-teal-50 transition duration-300">View Experience</a>
+            </div>
+        </header>
+
+        <main>
+            <section id="services" class="mb-16 md:mb-24">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">How I Can Help</h2>
+                 <div class="intro-text max-w-3xl mx-auto text-center text-gray-600 mb-12">
+                    <p>I offer a versatile skill set designed to support your business needs. From managing day-to-day administrative tasks to enhancing your customer experience and streamlining complex processes, my goal is to provide reliable, high-quality support that saves you time and improves efficiency. Explore my core service areas below.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition-all duration-300">
+                        <h3 class="text-xl font-bold text-teal-700 mb-3">Administrative Support</h3>
+                        <p class="text-gray-600">Efficient management of calendars, inboxes, and daily tasks to keep you organized and productive.</p>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition-all duration-300">
+                        <h3 class="text-xl font-bold text-teal-700 mb-3">Customer Experience</h3>
+                        <p class="text-gray-600">Professional multichannel support and complaint resolution to ensure high customer satisfaction.</p>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition-all duration-300">
+                        <h3 class="text-xl font-bold text-teal-700 mb-3">Logistics & E-commerce</h3>
+                        <p class="text-gray-600">Seamless order processing, delivery tracking, and contract coordination for retail and corporate clients.</p>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition-all duration-300">
+                        <h3 class="text-xl font-bold text-teal-700 mb-3">Operations & QA</h3>
+                        <p class="text-gray-600">Quality assurance audits, recruitment support, and process evaluation to enhance operational excellence.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience" class="relative">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Professional Journey</h2>
+                 <div class="intro-text max-w-3xl mx-auto text-center text-gray-600 mb-12">
+                    <p>My career has provided me with a diverse range of experiences across customer service, quality assurance, and administration. This interactive timeline highlights the key roles and responsibilities that have shaped my skills. Click on any position to expand the details and learn more about my contributions.</p>
+                </div>
+                <div class="border-l-2 border-teal-200 ml-6 md:ml-0 md:mx-auto md:w-full md:max-w-3xl">
+                    
+                    <div class="timeline-item mb-8 pl-12 md:pl-6 relative">
+                        <div class="absolute -left-[1.6rem] md:-left-3.5 top-1.5 w-6 h-6 bg-teal-600 rounded-full border-4 border-white"></div>
+                        <div class="bg-white p-6 rounded-lg shadow-md cursor-pointer timeline-item-header">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="text-sm text-gray-500">Nov 2022 – Present</p>
+                                    <h3 class="text-xl font-bold text-gray-800">Customer Service, Contract Coordinator & Admin Support</h3>
+                                    <p class="text-md text-gray-600 font-medium">Moyses Stevens - A Royal Warrant Florist</p>
+                                </div>
+                                <span class="arrow-icon text-teal-600 text-2xl">&#x276F;</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item-content bg-gray-50 rounded-b-lg">
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>Managed all client communications via phone, email, and live chat, ensuring prompt and professional support for customers.</li>
+                                <li>Streamlined order processing and logistics for a global client base, ensuring timely deliveries and a positive customer experience.</li>
+                                <li>Acted as a contract coordinator, managing relationships with corporate clients to ensure the smooth, weekly delivery of floral arrangements to offices and hotels.</li>
+                                <li>Served as the primary point of contact for complex issues, collaborating with remote UK-based teams to resolve customer escalations and maintain service quality.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item mb-8 pl-12 md:pl-6 relative">
+                        <div class="absolute -left-[1.6rem] md:-left-3.5 top-1.5 w-6 h-6 bg-teal-600 rounded-full border-4 border-white"></div>
+                        <div class="bg-white p-6 rounded-lg shadow-md cursor-pointer timeline-item-header">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="text-sm text-gray-500">Oct 2020 – Sep 2022</p>
+                                    <h3 class="text-xl font-bold text-gray-800">Senior Quality Assurance Analyst</h3>
+                                    <p class="text-md text-gray-600 font-medium">Philippine Airlines (Concentrix CVG Inc.)</p>
+                                </div>
+                                <span class="arrow-icon text-teal-600 text-2xl">&#x276F;</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item-content bg-gray-50 rounded-b-lg">
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>Conducted comprehensive quality assurance audits on voice, chat, and email interactions to ensure adherence to service standards and improve agent performance.</li>
+                                <li>Facilitated quality calibration sessions with stakeholders, leading to consistent performance metrics and a unified approach to service excellence.</li>
+                                <li>Supported BPO recruitment and onboarding, streamlining the process through efficient candidate screening, interview scheduling, and data logging.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item mb-8 pl-12 md:pl-6 relative">
+                        <div class="absolute -left-[1.6rem] md:-left-3.5 top-1.5 w-6 h-6 bg-teal-600 rounded-full border-4 border-white"></div>
+                        <div class="bg-white p-6 rounded-lg shadow-md cursor-pointer timeline-item-header">
+                             <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="text-sm text-gray-500">Mar 2020 – Oct 2020</p>
+                                    <h3 class="text-xl font-bold text-gray-800">Blended Support Advisor I</h3>
+                                    <p class="text-md text-gray-600 font-medium">Bed Bath & Beyond (Concentrix CVG Inc.)</p>
+                                </div>
+                                <span class="arrow-icon text-teal-600 text-2xl">&#x276F;</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item-content bg-gray-50 rounded-b-lg">
+                             <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>Assisted customers via voice, chat, and email, managing returns, refunds, tracking, and order updates.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                     <div class="timeline-item pl-12 md:pl-6 relative">
+                        <div class="absolute -left-[1.6rem] md:-left-3.5 top-1.5 w-6 h-6 bg-teal-600 rounded-full border-4 border-white"></div>
+                        <div class="bg-white p-6 rounded-lg shadow-md cursor-pointer timeline-item-header">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="text-sm text-gray-500">May 2016 – Jul 2019</p>
+                                    <h3 class="text-xl font-bold text-gray-800">Customer Service Consultant</h3>
+                                    <p class="text-md text-gray-600 font-medium">Priceline.com (Teleperformance PH)</p>
+                                </div>
+                                <span class="arrow-icon text-teal-600 text-2xl">&#x276F;</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item-content bg-gray-50 rounded-b-lg">
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>Provided comprehensive support for customer travel arrangements, including flights, hotels, and rental cars, by efficiently managing bookings, cancellations, and modifications to ensure a seamless experience.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            
+            <section id="tools" class="mt-16 md:mt-24">
+                 <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Technology & Tools</h2>
+                 <div class="intro-text max-w-3xl mx-auto text-center text-gray-600 mb-12">
+                    <p>I am proficient with a variety of modern tools and platforms essential for remote collaboration and productivity. This technical expertise allows me to integrate seamlessly into your existing workflows and start delivering value from day one.</p>
+                </div>
+                 <div class="max-w-4xl mx-auto flex flex-wrap justify-center items-center gap-4 md:gap-6">
+                    <span class="bg-white text-gray-700 text-lg font-medium px-4 py-2 rounded-full shadow-sm">Google Workspace</span>
+                    <span class="bg-white text-gray-700 text-lg font-medium px-4 py-2 rounded-full shadow-sm">Microsoft Office</span>
+                    <span class="bg-white text-gray-700 text-lg font-medium px-4 py-2 rounded-full shadow-sm">Zoom</span>
+                    <span class="bg-white text-gray-700 text-lg font-medium px-4 py-2 rounded-full shadow-sm">Excel</span>
+                    <span class="bg-white text-gray-700 text-lg font-medium px-4 py-2 rounded-full shadow-sm">CRM Platforms</span>
+                    <span class="bg-white text-gray-700 text-lg font-medium px-4 py-2 rounded-full shadow-sm">Shopify</span>
+                    <span class="bg-white text-gray-700 text-lg font-medium px-4 py-2 rounded-full shadow-sm">Email Clients</span>
+                 </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-16 md:mt-24 pt-12 border-t border-gray-200">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Ready to Streamline Your Business?</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">Let's connect and discuss how my skills can support your goals. I'm available for part-time, remote opportunities and ready to help you succeed.</p>
+            <a href="mailto:enrique.alipalaiii@gmail.com" class="bg-teal-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-teal-700 transition duration-300 inline-block">Get In Touch</a>
+            <div class="mt-8 text-gray-500">
+                <p>&copy; 2025 Enrique Alipala III. All Rights Reserved.</p>
+                <p>📍 Dubai, UAE (Open to Remote)</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+
+            timelineItems.forEach(item => {
+                const header = item.querySelector('.timeline-item-header');
+                header.addEventListener('click', () => {
+                    // Close other open items
+                    timelineItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('open')) {
+                            otherItem.classList.remove('open');
+                        }
+                    });
+                    // Toggle the clicked item
+                    item.classList.toggle('open');
+                });
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
