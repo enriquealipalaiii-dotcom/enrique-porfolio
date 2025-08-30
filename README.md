@@ -1,4 +1,4 @@
-Enrique Alipala III - Online Portfolio
+[Enrique Alipala III - Online Portfolio
 This repository contains the source code for my online portfolio and interactive resume.
 
 It is designed as a modern, single-page application that provides a comprehensive overview of my professional experience and skills as a Virtual Assistant and Operations Specialist.
@@ -11,3 +11,4 @@ Professional Overview: A detailed summary of my skills in administrative support
 Technology Showcase: Built using HTML, Tailwind CSS, and JavaScript to demonstrate proficiency in web development.
 
 Click here to view the live portfolio.
+](https://enriquealipalaiii-dotcom.github.io/enrique-porfolio/)
